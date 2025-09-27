@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Alejandro Fernandez">
+        <title> Bosques del mundo</title>
+        <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+        <link rel="stylesheet" href="styles2.css">
+    </head>
+    <body>
+        <header>
+            <h1>VerdeForest</h1>
+        </header>
+        <!--Menu-->
+        <nav class="menu">
+            <ul>
+                <li><a href="#tipos">Tipos de Bosques </a></li>
+                <li><a href="#encuesta">Encuesta</a></li>
+                <li><a href="#footer">Más información</a></li>
+            </ul>
+        </nav>
+        <!--Tipos de Bosque-->
+        <h2  class = "titulo_bosque"id="tipos">Tipos de Bosques</h2>
+        <div class="bosques-grid">
+            <div class="bosque" id="desc-tropical">
+                <h3>Bosque tropical</h3>
+                <img src="bosques_tropicales.jpg" alt="Bosque tropical" width="300">
+                <p>Son bosques con gran biodiversidad, clima cálido y lluvioso todo el año.</p>
+            </div>
+            <div class="bosque" id="desc-templado">
+                <h3>Bosque templado</h3>
+                <img src="Bosque_templado.jpg" alt="Bosque templado" width="300">
+                <p>Presentan estaciones bien marcadas y una amplia variedad de árboles de hoja caduca.</p>
+            </div>
+            <div class="bosque" id="desc-boreal">
+                <h3>Bosque boreal</h3>
+                <img src="Bosque_boreal.jpg" alt="Bosque boreal" width="300">
+                <p>Se localizan en zonas frías del hemisferio norte, con predominio de coníferas.</p>
+            </div>
+            <div class="bosque" id="desc-mediterraneo">
+                <h3>Bosque mediterráneo</h3>
+                <img src="Bosque_mediterraneo.jpg" alt="Bosque mediterráneo" width="300">
+                <p>Caracterizados por veranos secos y calurosos, con vegetación adaptada a la sequía.</p>
+            </div>
+        </div>
+            <!--Encuesta-->
+        <section class ="encuesta" id="encuesta">
+            <h2> Encuesta: ¿Cuál es tu bosque favorito?</h2>
+            <form>
+                <div class="opcion">
+                    <input type="radio" name="bosque" id="tropical" value="tropical">
+                    <label for="tropical">Bosque tropical</label>
+                </div>
+
+                <div class="opcion">
+                    <input type="radio" name="bosque" id="templado" value="templado">
+                    <label for="templado">Bosque templado</label>
+                </div>
+
+                <div class="opcion">
+                    <input type="radio" name="bosque" id="boreal" value="boreal">
+                    <label for="boreal">Bosque boreal</label>
+                </div>
+
+                <div class="opcion">
+                    <input type="radio" name="bosque" id="mediterraneo" value="mediterraneo">
+                    <label for="mediterraneo">Bosque mediterráneo</label>
+                </div>
+
+                <button type="submit">Votar</button>
+            </form>
+        </section>
+
+
+
+
+
+
+
+
+        <footer>
+            <p>Para más información visita <a href="https://es.wikipedia.org/wiki/Bosque">World Wildlife Fund</a></p>
+            <p>© 2025 Bosques del Mundo</p>
+        </footer>
+    </body>
+</html>

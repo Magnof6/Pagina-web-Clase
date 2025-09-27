@@ -1,0 +1,191 @@
+body {
+    background-image: url("FondoPantalla.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: forestgreen;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/*------MENU DE NAVEGACION------*/
+.menu {
+    position: fixed;
+    top: 60px; /* Justo debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: #498749; /* Opcional: igual que el header */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: flex;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 20px;
+    display: inline-block;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #006400;
+}
+
+/*------FIN MENU DE NAVEGACION------*/
+
+/*------Footer------*/
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: forestgreen;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*------FIN Footer------*/
+
+/*------SECCION BOSQUES------*/
+
+.titulo_bosque{
+
+    text-align: left;
+    color: darkgreen;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    scroll-margin-top: 120px; /* Ajusta este valor según la altura del header */
+}
+.bosques-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:20px ;
+    width: 70%;
+    margin: 20px auto auto auto; /*top right bottom left*/
+    /*padding: 80px 0; 
+    /*background-color: rgba(0, 0, 0, 0.4); /* Espacio para header y footer */
+}
+.bosque {
+    padding: 15px;
+    border-radius: 8px;    
+    text-align: center;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+}
+.bosque:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(61, 160, 61, 0.7); /* Fondo verde semitransparente al hacer hover */
+}
+.bosque img {
+    border-radius: 10px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+.bosque img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.bosque h3 {
+    font-size: 25px;
+    margin-top: 5px;
+    color: whitesmoke;
+}
+.bosque p{
+    color: whitesmoke;
+    font-size: 18px;
+}
+/*------FIN SECCION BOSQUES------*/
+
+/*------Encuesta------*/
+.encuesta {
+    width: 50%;
+    margin: 0 auto 50px auto; /*top rigt bottom left */
+    padding: 20px;
+    background-color: rgb(151, 233, 104);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+.encuesta h2 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    margin-top: 10px
+}
+.encuesta form{
+    font-size: 1.1em;
+}
+.opcion {
+    display: flex;              /* Input y label en línea */
+    align-items: center;        /* Centra verticalmente */
+    margin: 10px 0;
+    transition: transform 0.2s ease-in-out;
+    
+}
+.opcion label:hover {
+    transform: scale(1.1);
+    
+}
+
+.opcion input[type="radio"] {
+    margin-right: 10px; /* Espacio entre círculo y texto */
+    transform: scale(1.2); /* círculo un poco más grande */
+    cursor: pointer;
+}
+
+.opcion label {
+    cursor: pointer;
+    color: white;
+    cursor:pointer;
+    display: inline-block; /* Para que el hover funcione en todo el label */
+    transition: trans
+}
+.encuesta button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: forestgreen;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: left center;
+}
+
+.encuesta button:hover {
+    background-color: #006400;
+}
