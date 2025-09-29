@@ -91,12 +91,12 @@ footer {
     gap:20px ;
     width: 70%;
     margin: 20px auto auto auto; /*top right bottom left*/
-    /*padding: 80px 0; 
+    /*padding: 80px 0;
     /*background-color: rgba(0, 0, 0, 0.4); /* Espacio para header y footer */
 }
 .bosque {
     padding: 15px;
-    border-radius: 8px;    
+    border-radius: 8px;
     text-align: center;
     color: #333;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -129,10 +129,44 @@ footer {
 }
 /*------FIN SECCION BOSQUES------*/
 
+/*------Contenedor en dos columnas-------*/
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las dos columnas */
+}
+/*Columna izquierda: Opciones(encuesta)*/
+.opciones {
+    flex: 1; /* Ocupa la mitad del espacio disponible */
+}
+/*Columna derecha: Datos*/
+.datos {
+    flex: 1; /* Ocupa la mitad del espacio disponible, pero no menos de 250px */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los campos */
+}
+.datos label {
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+.datos input{
+    width: 100%;
+    max-width: 300px;
+}
+.datos input:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 /*------Encuesta------*/
 .encuesta {
     width: 50%;
-    margin: 0 auto 50px auto; /*top rigt bottom left */
+    margin: 20px auto 50px auto; /*top rigt bottom left */
     padding: 20px;
     background-color: rgb(151, 233, 104);
     border-radius: 8px;
@@ -184,6 +218,9 @@ footer {
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     transform-origin: left center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .encuesta button:hover {

@@ -48,26 +48,38 @@
         <section class ="encuesta" id="encuesta">
             <h2> Encuesta: ¿Cuál es tu bosque favorito?</h2>
             <form>
-                <div class="opcion">
-                    <input type="radio" name="bosque" id="tropical" value="tropical">
-                    <label for="tropical">Bosque tropical</label>
-                </div>
+                <div class="form-container">
+                    <!--Columna izquierda: Opciones-->
+                    <div class ="opciones"> <!--Si pongo required en una de las opciones, no me obliga a seleccionar esa opcion, si no una de las opciones-->
+                        <div class="opcion">
+                            <input type="radio" name="bosque" id="tropical" value="tropical" required>
+                            <label for="tropical">Bosque tropical</label>
+                        </div>
 
-                <div class="opcion">
-                    <input type="radio" name="bosque" id="templado" value="templado">
-                    <label for="templado">Bosque templado</label>
-                </div>
+                        <div class="opcion">
+                            <input type="radio" name="bosque" id="templado" value="templado">
+                            <label for="templado">Bosque templado</label>
+                        </div>
 
-                <div class="opcion">
-                    <input type="radio" name="bosque" id="boreal" value="boreal">
-                    <label for="boreal">Bosque boreal</label>
-                </div>
+                        <div class="opcion">
+                            <input type="radio" name="bosque" id="boreal" value="boreal">
+                            <label for="boreal">Bosque boreal</label>
+                        </div>
 
-                <div class="opcion">
-                    <input type="radio" name="bosque" id="mediterraneo" value="mediterraneo">
-                    <label for="mediterraneo">Bosque mediterráneo</label>
-                </div>
+                        <div class="opcion">
+                            <input type="radio" name="bosque" id="mediterraneo" value="mediterraneo">
+                            <label for="mediterraneo">Bosque mediterráneo</label>
+                        </div>
+                    </div>
+                    <!--Columna derecha: Datos-->
+                    <div class="datos">
+                        <label for="nombre">Nombre y apellidos:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellidos" required>
 
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                    </div>
+                </div>
                 <button type="submit">Votar</button>
             </form>
         </section>
