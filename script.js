@@ -6,11 +6,19 @@ document.addEventListener('DOMContentLoaded', () => { //DOMContentLoaded espera 
 
     function toggleSidebar() {
         sidebar.classList.toggle('active');
+
+        if(sidebar.classList.contains('active')){
+            toggleButton.textContent = '✖'; // Cambia el icono a una "X" cuando el sidebar está abierto
+        }else{
+            toggleButton.textContent = '☰'; // Cambia el icono a "☰" cuando el sidebar está cerrado
+        }
+
     }
 
     function closeSidebarOnClickOutside(event) {
         if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
             sidebar.classList.remove('active');
+            toggleButton.textContent = '☰'; // Cambia el icono a "☰" cuando el sidebar está cerrado
         } //Si el click no es ni en el sidebar ni en el botón, cierro el sidebar
     }
 
@@ -46,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Comprobamos que realmente exista y sea la sublista
             if (submenu && submenu.classList.contains('sublist')) {
                 submenu.classList.toggle('active'); // Mostrar u ocultar
+                dt.classList.toggle('open'); // Cambiar el icono de la flecha
             }
         });
     });

@@ -127,6 +127,15 @@ header{
 .sublist.active {
     display: block;
 }
+.toggle-submenu::after{ /*after permite añadir contenido despues del elemento, en este caso una flecha*/
+    content: "▸"; /* Flecha hacia la derecha */
+    transition: transform 0.3s;
+}
+.toggle-submenu.open::after {
+    /*transform: rotate(90deg);*/
+    content: "▾"; /* Flecha hacia abajo */
+    
+}
 
 
 
@@ -235,6 +244,7 @@ footer {
 .datos input{
     width: 100%;
     max-width: 300px;
+    border-radius: 5px;
 }
 .datos input:hover {
     transform: scale(1.05);
