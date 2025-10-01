@@ -26,17 +26,26 @@ header{
     left: 0;
     width: 100%;
     background-color: #498749; /* Opcional: igual que el header */
-    justify-content: center;
+    /* justify-content: center;*/
     align-items: center;
     z-index: 999;
     display: flex;
 }
-
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 20px;
+    /* align-self: flex-start;*/
+}
 .menu ul {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .menu li {
@@ -44,6 +53,7 @@ header{
     margin: 0 20px;
     display: inline-block;
 }
+
 
 .menu a {
     color: white;
@@ -58,7 +68,49 @@ header{
 
 /*------FIN MENU DE NAVEGACION------*/
 
-/*------Footer------*/
+/*------MENU LATERAL OCULTO------*/
+.sidebar {
+    position: fixed;
+    top: 100px; /* 60px header + 50px menu */
+    /*left: 0;*/
+    width: 250px;
+    left: -300px; /* Oculto inicialmente */
+    height: calc(100% - 100px - 75px); /* espacio libre entre header/menu y footer */
+    background: #2e7d32;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1500;
+}
+.sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar li {
+    margin: 15px 0;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display : block;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+.sidebar a:hover {
+    background: #006400;
+}
+.sidebar.active {
+    left: 0; /* Muestra el menú */
+}
+
+/*------FOOTER------*/
 footer {
     position: fixed;
     bottom: 0;

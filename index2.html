@@ -7,6 +7,7 @@
         <title> Bosques del mundo</title>
         <link rel="icon" type="image/jpeg" href="favicon.jpeg">
         <link rel="stylesheet" href="styles2.css">
+        <script src ="script.js" defer></script>
     </head>
     <body>
         <header>
@@ -14,12 +15,21 @@
         </header>
         <!--Menu-->
         <nav class="menu">
+            <button id="toggleSidebar" class="menu-button">☰</button>
             <ul>
                 <li><a href="#tipos">Tipos de Bosques </a></li>
                 <li><a href="#encuesta">Encuesta</a></li>
                 <li><a href="#footer">Más información</a></li>
             </ul>
         </nav>
+        <!--Menú lateral oculto-->
+        <aside id="sidebar" class="sidebar">
+            <h3>Más contenido</h3>
+            <ul>
+                <li><a href="#fauna">Fauna</a></li>
+                <li><a href="#flora">Flora</a></li>
+            </ul>
+        </aside>
         <!--Tipos de Bosque-->
         <h2  class = "titulo_bosque"id="tipos">Tipos de Bosques</h2>
         <div class="bosques-grid">
