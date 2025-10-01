@@ -19,6 +19,9 @@ header{
     z-index: 1000;
 }
 
+
+
+
 /*------MENU DE NAVEGACION------*/
 .menu {
     position: fixed;
@@ -68,6 +71,9 @@ header{
 
 /*------FIN MENU DE NAVEGACION------*/
 
+
+
+
 /*------MENU LATERAL OCULTO------*/
 .sidebar {
     position: fixed;
@@ -87,9 +93,14 @@ header{
     margin-bottom: 15px;
     text-align: center;
 }
-.sidebar ul {
+.sidebar dt {
     list-style: none;
-    padding: 0;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sidebar dt:hover {
+    background-color: #006400;
 }
 .sidebar li {
     margin: 15px 0;
@@ -97,7 +108,7 @@ header{
 .sidebar a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     display : block;
     padding: 8px;
     border-radius: 5px;
@@ -109,6 +120,16 @@ header{
 .sidebar.active {
     left: 0; /* Muestra el menú */
 }
+.sublist {
+    display: none;
+    margin-left: 15px;
+}
+.sublist.active {
+    display: block;
+}
+
+
+
 
 /*------FOOTER------*/
 footer {
@@ -124,6 +145,9 @@ footer {
     justify-content: center;
 }
 /*------FIN Footer------*/
+
+
+
 
 /*------SECCION BOSQUES------*/
 
@@ -181,7 +205,10 @@ footer {
 }
 /*------FIN SECCION BOSQUES------*/
 
-/*------Contenedor en dos columnas-------*/
+
+
+
+/*------CONTENEDOR EN DOS COLUMNAS-------*/
 .form-container {
     display: flex;
     justify-content: space-between;
@@ -215,7 +242,9 @@ footer {
 }
 
 
-/*------Encuesta------*/
+/*------ENCUESTA------*/
+
+
 .encuesta {
     width: 50%;
     margin: 20px auto 50px auto; /*top rigt bottom left */
@@ -278,3 +307,4 @@ footer {
 .encuesta button:hover {
     background-color: #006400;
 }
+
