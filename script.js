@@ -1,4 +1,4 @@
-//Para abrir y cerrar el menú lateral
+//PARA ABRIR Y CERRAR EL MENU LATERAL
 
 document.addEventListener('DOMContentLoaded', () => { //DOMContentLoaded espera a que se cargue el HTML
     const toggleButton = document.getElementById('toggleSidebar');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => { //DOMContentLoaded espera 
 // en lugar de esperar al click.
 // La función flecha sirve para "envolver" la llamada y ejecutarla solo al hacer click.
 
-
+//PARA ABRIR Y CERRAR SUBMENUS EN EL MENU LATERAL
 
 // Espera a que cargue todo el DOM
 document.addEventListener('DOMContentLoaded', () => {
@@ -57,5 +57,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 dt.classList.toggle('open'); // Cambiar el icono de la flecha
             }
         });
+    });
+});
+
+//FUNCIÓN QUE MANDA UNA ALERTA AL ENVIAR LA ENCUESTA
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('encuestaForm');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Evita que se recargue la página
+        alert('Su respuesta se ha enviado correctamente, gracias por participar!!');
+        form.reset(); // Resetea el formulario
+    });
+});
+
+//PARA ABRIR Y CERRAR LA VENTANA OCULTA DE MÁS INFORMACIÓN 
+document.addEventListener('DOMContentLoaded', () => {
+    const ventana = document.getElementById('ventanaOculta');
+    const btnMasInfo = document.getElementById('btnMasInfo');
+    const cerrarBtn = document.getElementById('cerrarBtn');
+    
+    //abrir ventana
+    btnMasInfo.addEventListener('click', (event) =>{
+        event.preventDefault(); //Evita que se recargue la página
+        ventana.style.display = 'flex';
+    });
+
+    //cerrar ventana
+    cerrarBtn.addEventListener('click', () => {
+        ventana.style.display = 'none';
+    });
+    
+    //cerrar ventana al hacer click fuera de ella
+    ventana.addEventListener('click', (event) => {
+        if(event.target === ventana){
+            ventana.style.display = 'none';
+        }
     });
 });
