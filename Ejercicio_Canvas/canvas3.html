@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>Canvas3</title>
+    </head>
+    <body>
+        <canvas width="500" height="500" id="myCanvas"></canvas>
+        <script type="text/javascript">
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext("2d");
+            ctx.strokeRect(50,50,100,50); /*x,y,ancho,alto*/
+            ctx.fillStyle = "red";
+            ctx.fillRect(200,50,100,50);
+            ctx.clearRect(210,60,80,30); //El rectangulo se dibuja de arriba hacia abajo
+            ctx.stroke();
+        </script>
+    </body>
+</html>

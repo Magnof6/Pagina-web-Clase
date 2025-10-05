@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>Canvas4</title>
+    </head>
+    <body>
+        <canvas width="500" height="500" id="myCanvas"></canvas>
+        <script type="text/javascript">
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext("2d");
+            let angulo = 0;
+            function dibujarHexagono(){
+                ctx.beginPath();
+                ctx.moveTo(100,200);
+                ctx.lineTo(200,200);
+                ctx.lineTo(150,100);
+                ctx.lineTo(100,200);
+                ctx.stroke();
+                ctx.fillStyle = "red";
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(150,100);
+                ctx.lineTo(250,100);
+                ctx.lineTo(200,200);
+                ctx.stroke();
+                ctx.fillStyle = "blue";
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(150,100);
+                ctx.lineTo(200,10);
+                ctx.lineTo(250,100);
+                ctx.stroke();
+                ctx.fillStyle = "green";
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(150,100);
+                ctx.lineTo(100,10);
+                ctx.lineTo(200,10);
+                ctx.stroke();
+                ctx.fillStyle = "yellow";
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(150,100);
+                ctx.lineTo(50,100);
+                ctx.lineTo(100,10);
+                ctx.fillStyle = "purple";
+                ctx.fill();
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(150,100);
+                ctx.lineTo(100,200);
+                ctx.lineTo(50,100);
+                ctx.stroke();
+                ctx.fillStyle = "orange";
+                ctx.fill();
+                ctx.closePath();
+            }
+            function animar(){
+                ctx.clearRect(0,0,canvas.width,canvas.height); //x,y,ancho,alto. se utiliza para borrar el canvas
+                ctx.save(); //Guarda el estado actual del canvas
+                ctx.translate(250,250); //Traslada el canvas al centro
+
+                // Rotamos todo el sistema de coordenadas
+                ctx.rotate(angulo);
+
+                // Dibujamos el hexágono centrado (ajustamos su posición al centro)
+                ctx.translate(-150, -100); // para que el centro del hexágono quede en el origen
+                dibujarHexagono();
+
+                // Restauramos el estado
+                ctx.restore();
+
+                // Incrementamos el ángulo
+                angulo += 0.01;
+
+                // Llamamos al siguiente frame
+                requestAnimationFrame(animar);
+                }
+
+            animar();
+            
+            
+            
+        </script>
+    </body>
+</html>
