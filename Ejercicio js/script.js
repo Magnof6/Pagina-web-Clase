@@ -25,7 +25,7 @@ function letraRandom() {
 }
 //Función para generar contraseña repitiendo palabras
 function generarPassword(){
-    const length = document.getElementById("length").value;
+    const length = Number(document.getElementById("length").value); //Me devuelve string, con Number lo convierto a numero
     let password = "";
     for (let i = 0; i < length; i++){
         password += letraRandom();
