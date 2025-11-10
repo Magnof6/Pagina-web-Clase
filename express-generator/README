@@ -1,0 +1,8 @@
+Ejecutar en el terminal:
+npx express-generator proyecto-login --view=ejs
+-proyecto-login es la carpeta donde queremos que se cree la estructura de express
+
+npm install express
+Si no se instala automaticamente porque detecta fallos,
+ejecutar:
+npm audit fix --force
