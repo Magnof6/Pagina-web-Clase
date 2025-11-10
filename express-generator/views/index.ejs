@@ -6,6 +6,20 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+    <% if (user) { %>
+      <p>Bienvenido, <%= user %> | <a href="/login/logout">Cerrar sesión</a></p>
+    <% } else { %>
+      <a href="/login">Iniciar sesión</a>
+    <% } %>
+
+    <ul>
+      <% elementos.forEach(e => { %>
+        <li>
+          <p><%= e.texto %></p>
+          <img src="<%= e.img %>" alt="<%= e.texto %>" width="100">
+        </li>
+      <% }) %>
+    </ul>
   </body>
 </html>
