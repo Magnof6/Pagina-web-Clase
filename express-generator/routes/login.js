@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
 
     if (username === usuario.username && password === usuario.password) {
         req.session.user = username; // Guardar el usuario en la sesión
-        res.redirect('/protected');
+        res.redirect('/restringida');
     } else {
         res.render('login', { title: 'Login', error: 'Credenciales incorrectas' });
     }
