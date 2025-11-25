@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat en tiempo real</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <script>
+            window.USER = "<%= user %>";
+        </script>
+        <script src="/socket.io/socket.io.js" defer></script>
+        <script src="/javascripts/chatFunc.js" defer></script>
+    </head>
+    <body>
+        <h1>Chat en tiempo real</h1>
+        <p> Usurario: <%= user %></p>
+        <ul id="mensajes"></ul>
+
+        <input id="input" autocomplete="off">
+        <button id="enviar">Enviar</button>
+        
+    
+    </body>
+</html>
