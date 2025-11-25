@@ -8,7 +8,7 @@ const usuario = {
 };
 /* GET login page. */
 router.get('/', (req, res)=> {
-    res.render('login', { title: 'Login' , error: null});
+    res.render('login', { title: 'Login' , error: null, user: req.session.user });
 });
 
 /* POST login., procesar el login */

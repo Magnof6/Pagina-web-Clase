@@ -6,3 +6,6 @@ npm install express
 Si no se instala automaticamente porque detecta fallos,
 ejecutar:
 npm audit fix --force
+Para iniciar el servidor:
+npm start
+El servidor se iniciará en http://localhost:3000
